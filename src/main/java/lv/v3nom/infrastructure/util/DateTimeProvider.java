@@ -1,4 +1,7 @@
 package lv.v3nom.infrastructure.util;
 
-public class DateTimeProvider {
+import java.time.LocalDateTime;
+
+public interface DateTimeProvider {
+    LocalDateTime now();
 }

@@ -1,4 +1,4 @@
-package lv.v3nom.infrastructure.di;
+package lv.v3nom.infrastructure.di.impl;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class DIContainer_Impl implements DIContainer {
+public class DIContainer implements lv.v3nom.infrastructure.di.DIContainer {
     Map<Class<?>, Class<?>> dependencies = new HashMap<>();
 
     public <T> void register(Class<T> abstraction, Class<? extends T> implementation){
