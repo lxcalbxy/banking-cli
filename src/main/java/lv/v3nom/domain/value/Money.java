@@ -15,6 +15,7 @@ public class Money {
             this.amount = amount;
         }
     }
+
     public Money add(BigDecimal amountToAdd) {
         BigDecimal newAmount = this.amount.add(amountToAdd);
         return new Money(newAmount);

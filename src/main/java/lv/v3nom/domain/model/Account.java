@@ -1,16 +1,16 @@
 package lv.v3nom.domain.model;
 
-import lv.v3nom.domain.value.AccountId;
-import lv.v3nom.domain.value.CustomerId;
-import lv.v3nom.domain.value.Money;
-import lv.v3nom.domain.value.TransactionId;
+import lv.v3nom.domain.value.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Account {
-    AccountId accountId;
-    CustomerId customerId;
-    Money balance;
+    private AccountId accountId;
+    private CustomerId ownerId;
+    private Money balance;
+    private AccountStatus accountStatus;
+    private LocalDateTime createdAt;
 
     List<TransactionId> transactionHistory;
 }
