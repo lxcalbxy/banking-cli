@@ -1,6 +1,6 @@
 package lv.v3nom.domain.value;
 
-public class PhoneNumber {
+public final class PhoneNumber {
     private final String value;
 
     private PhoneNumber(String value) {

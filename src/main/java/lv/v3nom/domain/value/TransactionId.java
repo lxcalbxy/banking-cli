@@ -2,7 +2,7 @@ package lv.v3nom.domain.value;
 
 import lv.v3nom.infrastructure.util.IdGenerator;
 
-public class TransactionId {
+public final class TransactionId {
     private final String value;
 
     private TransactionId(String value) {

@@ -5,7 +5,7 @@ import lv.v3nom.infrastructure.util.impl.SystemDateTimeProvider;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Token {
+public final class Token {
     SystemDateTimeProvider clock = new SystemDateTimeProvider();
 
     private final String value;

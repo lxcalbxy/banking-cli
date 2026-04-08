@@ -2,7 +2,7 @@ package lv.v3nom.domain.value;
 
 import lv.v3nom.infrastructure.util.IdGenerator;
 
-public class AccountId {
+public final class AccountId {
     private final String value;
 
     private AccountId(String value) {

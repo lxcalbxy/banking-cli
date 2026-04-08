@@ -2,7 +2,7 @@ package lv.v3nom.domain.value;
 
 import java.util.regex.Pattern;
 
-public class EmailAddress {
+public final class EmailAddress {
     private final String value;
 
     private EmailAddress(String value) {

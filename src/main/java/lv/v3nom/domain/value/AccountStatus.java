@@ -1,6 +1,6 @@
 package lv.v3nom.domain.value;
 
-public class AccountStatus {
+public final class AccountStatus {
     private final String value;
 
     private AccountStatus(String value) {
