@@ -15,11 +15,9 @@ public class CustomerId {
     public static CustomerId generate() {
         return new CustomerId(IdGenerator.generateDigitId());
     }
-
     public static CustomerId of(String existingId) {
         return new CustomerId(existingId);
     }
-
     public String getValue() {
         return value;
     }
@@ -31,9 +29,15 @@ public class CustomerId {
         CustomerId that = (CustomerId) o;
         return value.equals(that.value);
     }
-
     @Override
     public int hashCode() {
         return value.hashCode();
+    }
+    @Override
+    public String toString() {
+        return String.format(
+                "CustomerId{value='%s'}",
+                value
+        );
     }
 }
