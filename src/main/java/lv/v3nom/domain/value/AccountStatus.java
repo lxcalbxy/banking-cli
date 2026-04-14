@@ -1,5 +1,6 @@
 package lv.v3nom.domain.value;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class AccountStatus {
     private final String value;
 
@@ -21,24 +22,15 @@ public final class AccountStatus {
     public static final AccountStatus BLOCKED =
             new AccountStatus("BLOCKED");
 
-    public static AccountStatus setValue(String newStatus) {
-        return new AccountStatus(newStatus);
-    }
-
-    public String getValue() {
-        return value;
-    }
+    public String getValue() { return this.value; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountStatus that = (AccountStatus) o;
-        return value.equals(that.value);
+        return this.value.equals(that.value);
     }
-
     @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
+    public int hashCode() { return this.value.hashCode(); }
 }
