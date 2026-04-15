@@ -1,4 +1,4 @@
-package lv.v3nom.infrastructure.repository;
+package lv.v3nom.infrastructure.repository.INMEM;
 
 public interface AccountRepository {
 }
