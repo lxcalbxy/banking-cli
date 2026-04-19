@@ -15,39 +15,34 @@ public class CustomerNotFoundException extends RuntimeException {
 
     public CustomerNotFoundException() {
         super("Customers not found");
-
         this.customerId = null;
         this.emailAddress = null;
         this.phoneNumber = null;
         this.customerStatus = null;
     }
     public CustomerNotFoundException(CustomerId customerId) {
-        super("Customer not found with id=" + customerId.getValue());
-
+        super(String.format("Customer not found with Customer ID=[%s]", customerId.getValue()));
         this.customerId = customerId;
         this.emailAddress = null;
         this.phoneNumber = null;
         this.customerStatus = null;
     }
     public CustomerNotFoundException(EmailAddress emailAddress) {
-        super("Customer not found with email=" + emailAddress.getValue());
-
+        super(String.format("Customer not found with Email=[%s]", emailAddress.getValue()));
         this.customerId = null;
         this.emailAddress = emailAddress;
         this.phoneNumber = null;
         this.customerStatus = null;
     }
     public CustomerNotFoundException(PhoneNumber phoneNumber) {
-        super("Customer not found with id=" + phoneNumber.getValue());
-
+        super(String.format("Customer not found with Phone=[%s]", phoneNumber.getValue()));
         this.customerId = null;
         this.emailAddress = null;
         this.phoneNumber = phoneNumber;
         this.customerStatus = null;
     }
     public CustomerNotFoundException(CustomerStatus customerStatus) {
-        super("Customer not found with id=" + customerStatus.getValue());
-
+        super(String.format("Customer not found with Status=[%s]", customerStatus.getValue()));
         this.customerId = null;
         this.emailAddress = null;
         this.phoneNumber = null;
