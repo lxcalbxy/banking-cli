@@ -1,7 +1,5 @@
 package lv.v3nom.domain.value;
 
-import lv.v3nom.infrastructure.util.impl.SystemDateTimeProvider;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 
