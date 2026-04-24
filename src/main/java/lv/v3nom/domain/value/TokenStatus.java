@@ -1,5 +1,6 @@
 package lv.v3nom.domain.value;
 
+@SuppressWarnings("ClassCanBeRecord")
 public class TokenStatus {
     private final String value;
 

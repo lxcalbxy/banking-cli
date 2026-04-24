@@ -10,6 +10,8 @@ public final class CustomerStatus {
         this.value = value;
     }
 
+    public static final CustomerStatus PENDING_VERIFICATION =
+            new CustomerStatus("PENDING_VERIFICATION");
     public static final CustomerStatus ACTIVE =
             new CustomerStatus("ACTIVE");
     public static final CustomerStatus SUSPENDED =

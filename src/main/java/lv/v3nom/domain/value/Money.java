@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class Money implements Comparable<Money>{
     private final BigDecimal amount;
 
@@ -29,14 +30,6 @@ public final class Money implements Comparable<Money>{
         return new Money(BigDecimal.valueOf(amount));
     }
 
-    /*
-    wrong shit
-
-    public Money add(BigDecimal amountToAdd) {
-        BigDecimal newAmount = this.amount.add(amountToAdd);
-        return new Money(newAmount);
-    }*/
-
     // MATH
     public Money add(Money other) {
         return new Money(this.amount.add(other.amount));
@@ -48,7 +41,7 @@ public final class Money implements Comparable<Money>{
         return new Money(this.amount.multiply(BigDecimal.valueOf(multiplier)));
     }
 
-    // COMPARSION
+    // COMPARISON
     public boolean isGreaterThan(Money other) {
         return this.amount.compareTo(other.amount) > 0;
     }

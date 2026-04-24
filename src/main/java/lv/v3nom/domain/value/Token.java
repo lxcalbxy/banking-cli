@@ -16,9 +16,9 @@ public final class Token {
         this.customerId = customerId;
     }
 
-    public static Token create(String value, LocalDateTime expiry, CustomerId customerId) {
+    public static Token create(String value, LocalDateTime expiry, CustomerId customerId, LocalDateTime now) {
         if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("UUID cannot be empty or null");
+            throw new IllegalArgumentException("Token value cannot be empty or null");
         }
         if (expiry == null) {
             throw new IllegalArgumentException("Expire date is null");
@@ -26,7 +26,7 @@ public final class Token {
         if (customerId == null) {
             throw new IllegalArgumentException("CustomerID is null");
         }
-        if (expiry.isBefore(LocalDateTime.now())) {
+        if (expiry.isBefore(now)) {
             throw new IllegalArgumentException("Cannot create expired token");
         }
         return new Token(value, expiry, customerId);
@@ -55,7 +55,7 @@ public final class Token {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (this == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Token that = (Token) o;
         return this.value.equals(that.value) &&
                 this.expiry.equals(that.expiry) &&

@@ -1,7 +1,8 @@
 package lv.v3nom.domain.value;
 
-import lv.v3nom.infrastructure.util.IdGenerator;
+import lv.v3nom.common.util.IdGenerator;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class TransactionId {
     private final String value;
 

@@ -2,6 +2,7 @@ package lv.v3nom.domain.value;
 
 import java.util.Objects;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class TransactionType {
     private final String transactionCode;
     private final String transactionName;

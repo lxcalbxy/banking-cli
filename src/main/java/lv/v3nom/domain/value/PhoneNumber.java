@@ -1,5 +1,6 @@
 package lv.v3nom.domain.value;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class PhoneNumber {
     private final String value;
 

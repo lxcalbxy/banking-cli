@@ -1,5 +1,6 @@
 package lv.v3nom.domain.value;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class TransactionStatus {
     private final String value;
 
