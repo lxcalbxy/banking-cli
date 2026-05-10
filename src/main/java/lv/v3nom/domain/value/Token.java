@@ -29,6 +29,12 @@ public final class Token {
         if (expiry.isBefore(now)) {
             throw new IllegalArgumentException("Cannot create expired token");
         }
+        if (value.length() < 32) {
+            throw new IllegalArgumentException("Token is shorter than expected: " + value.length());
+        }
+        if (value.matches("^[A-Za-z0-9_-]+$")) {
+            throw new IllegalArgumentException("Token contains invalid characters");
+        }
         return new Token(value, expiry, customerId);
     }
 
