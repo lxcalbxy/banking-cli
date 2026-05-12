@@ -10,7 +10,7 @@ public class TransactionResponse {
     private String targetAccountId;
     private BigDecimal amount;
     private String failureReason; // blank most times
-    private String timestamp;
+    private String createdAt;
     private String completedAt;
 
     public TransactionResponse() {}
@@ -21,7 +21,7 @@ public class TransactionResponse {
                                String targetAccountId,
                                BigDecimal amount,
                                String failureReason,
-                               String timestamp,
+                               String createdAt,
                                String completedAt) {
 
         this.transactionId = transactionId;
@@ -31,7 +31,7 @@ public class TransactionResponse {
         this.targetAccountId = targetAccountId;
         this.amount = amount;
         this.failureReason = failureReason;
-        this.timestamp = timestamp;
+        this.createdAt = createdAt;
         this.completedAt = completedAt;
     }
 
@@ -42,6 +42,6 @@ public class TransactionResponse {
     public String getTargetAccountId() { return targetAccountId; }
     public BigDecimal getAmount() { return amount; }
     public String getFailureReason() { return failureReason; }
-    public String getTimestamp() { return timestamp; }
+    public String getCreatedAt() { return createdAt; }
     public String getCompletedAt() { return completedAt; }
 }
